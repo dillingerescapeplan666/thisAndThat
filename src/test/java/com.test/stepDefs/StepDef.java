@@ -38,10 +38,10 @@ public class StepDef {
 
 
     @Given("^User writes URL to browser$")
-        public void user_writes_url_to_browser() throws InterruptedException {
-            mainMethods.navigateToUrl("https://shop.hmusic.hu");
-            mainMethods.logMessage("The user opened shop.hmusic.hu");
-            mainMethods.waitSome();
+        public void user_writes_url_to_browser() {
+            mainMethods.navigateToUrl("https://www.supersklep.hu");
+            mainMethods.logMessage("The user opened www.supersklep.hu");
+            mainMethods.waitSome(10);
 
     }
 
