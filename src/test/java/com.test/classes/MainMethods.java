@@ -19,9 +19,15 @@ public class MainMethods {
         driver.get(url);
     }
 
+    public void logMessage(String string){
+        System.out.println(string);
+    }
 
-    public void openPage(String url) {
-        navigateToUrl("https://hammerworld.hu/");
+
+    public void waitSome() throws InterruptedException {
+
+
+        Thread.sleep(2000);
     }
 
 
