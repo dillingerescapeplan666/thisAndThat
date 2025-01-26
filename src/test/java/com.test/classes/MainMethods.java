@@ -32,7 +32,10 @@ public class MainMethods {
 
     public void waitSome(int seconds) {
        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-       WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".customer-panel")));
+       WebElement approveCookie = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#privacyModal > div.privacy-content > div.privacy-button-container > button.privacy-confirm-button.js--privacy-submit")));
+       approveCookie.click();
+       WebElement sneakerButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div.container > div.parallax-wrapper > div > div:nth-child(1) > a > div.banner-header-wrapper > h2 > small > i")));
+       sneakerButton.click();
 
     }
 
